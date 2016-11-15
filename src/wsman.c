@@ -530,7 +530,7 @@ wsman_options_set_properties(client_opt_t *options)
 	while (properties != NULL && properties[c] != NULL) {
 		char *cc[3] = { NULL, NULL, NULL };
 		u_tokenize1(cc, 2, properties[c], '=');
-                wsmc_add_property(options, cc[0], cc[1]);
+                wsmc_add_property_array_item(options, cc[0], cc[1]);
 		c++;
 	}
 	return;
